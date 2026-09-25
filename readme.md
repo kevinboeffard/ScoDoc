@@ -202,5 +202,5 @@ java -cp "class;lib/mysql-connector-j-9.7.0.jar" --module-path lib/javafx --add-
 
 ## 👤 Auteur
 
-**Kevin Boeffard** — [@kevinboeffard](https://github.com/kevinboeffard)
-Étudiant BUT Informatique — IUT de Vannes (Université Bretagne Sud)
+**Kevin Boeffard** - [@kevinboeffard](https://github.com/kevinboeffard)
+Étudiant BUT Informatique - IUT de Vannes (Université Bretagne Sud)
