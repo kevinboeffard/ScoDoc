@@ -7,7 +7,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white)
 ![Architecture](https://img.shields.io/badge/Architecture-MVC%20%2B%20DAO-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Maquette Figma](https://www.figma.com/proto/JNSnBzYoj9juJMJXpDklss/SAE-Scodoc?node-id=337-157&p=f&t=tbdncotgnyDrYEkJ-1&scaling=contain&content-scaling=fixed&page-id=337%3A2&starting-point-node-id=337%3A157)
+🎨 [Voir la maquette Figma](https://www.figma.com/proto/JNSnBzYoj9juJMJXpDklss/SAE-Scodoc?node-id=337-157&p=f&t=tbdncotgnyDrYEkJ-1&scaling=contain&content-scaling=fixed&page-id=337%3A2&starting-point-node-id=337%3A157)
 
 ---
 
