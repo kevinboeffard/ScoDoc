@@ -1,0 +1,97 @@
+.sidebar-item {
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+.sidebar-item-active {
+    -fx-cursor: hand;
+    -fx-background-color: #eff6ff;
+    -fx-background-radius: 6px;
+}
+
+.search-field {
+    -fx-background-color: #f1f5f9, #f1f5f9;
+    -fx-background-insets: 0, 1.5;
+    -fx-background-radius: 20px;
+    -fx-padding: 6px 15px;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+.search-field:focused {
+    -fx-background-color: #e2e8f0, #f1f5f9;
+    -fx-background-insets: 0, 1.5;
+}
+
+.card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 8, 0, 0, 2);
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f8fafc;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #eff6ff;
+}
+
+.table-view .table-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #1e293b;
+    -fx-padding: 10px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f1f5f9;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #f1f5f9;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+    -fx-size: 40px;
+}
+
+.table-view .table-row-cell {
+    -fx-cell-size: 45px;
+}
+
+.table-view .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view:focused {
+    -fx-border-color: #e2e8f0;
+}

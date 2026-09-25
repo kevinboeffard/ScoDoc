@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.DashboardDEController"
+            style="-fx-background-color: #f8fafc;">
+   <children>
+      <VBox spacing="20.0" AnchorPane.topAnchor="30.0" AnchorPane.leftAnchor="30.0"
+            AnchorPane.rightAnchor="30.0" AnchorPane.bottomAnchor="30.0">
+         <children>
+
+            <VBox spacing="4.0">
+               <children>
+                  <Label fx:id="lblBienvenue" text="Bonjour" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                  <Label text="Vue d'ensemble de l'établissement — Espace Directeur des Études" style="-fx-font-size: 13px; -fx-text-fill: #64748b;" />
+               </children>
+            </VBox>
+
+            <HBox spacing="16.0">
+               <children>
+                  <VBox spacing="4.0" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-padding: 16px;">
+                     <children>
+                        <Label fx:id="lblNbEtudiants" text="--" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <Label text="ÉTUDIANTS" style="-fx-font-size: 11px; -fx-text-fill: #94a3b8; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="4.0" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-padding: 16px;">
+                     <children>
+                        <Label fx:id="lblNbEnseignants" text="--" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <Label text="ENSEIGNANTS" style="-fx-font-size: 11px; -fx-text-fill: #94a3b8; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="4.0" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-padding: 16px;">
+                     <children>
+                        <Label fx:id="lblNbModules" text="--" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <Label text="MODULES" style="-fx-font-size: 11px; -fx-text-fill: #94a3b8; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="4.0" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-padding: 16px;">
+                     <children>
+                        <Label fx:id="lblNbPromotions" text="--" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <Label text="PROMOTIONS" style="-fx-font-size: 11px; -fx-text-fill: #94a3b8; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="4.0" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-padding: 16px;">
+                     <children>
+                        <Label fx:id="lblNbGroupes" text="--" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <Label text="GROUPES" style="-fx-font-size: 11px; -fx-text-fill: #94a3b8; -fx-font-weight: bold;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

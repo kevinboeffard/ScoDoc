@@ -1,0 +1,61 @@
+.text-field {
+    -fx-background-color: #e2e8f0, #ffffff;
+    -fx-background-insets: 0, 1.5;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+.text-field:focused {
+    -fx-background-color: #3b82f6, #ffffff;
+    -fx-background-insets: 0, 1.5;
+}
+
+.password-field {
+    -fx-background-color: #cbd5e1, #f8fafc;
+    -fx-background-insets: 0, 1.5;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+}
+
+.btn-connexion {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #e2e8f0, #ffffff;
+    -fx-background-insets: 0, 1.5;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-background-color: #3b82f6, #ffffff;
+    -fx-background-insets: 0, 1.5;
+}
+
+.btn-connexion {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+
+.btn-connexion:hover {
+    -fx-background-color: #2563eb;
+}
+
+.btn-connexion:pressed {
+    -fx-background-color: #1d4ed8;
+}

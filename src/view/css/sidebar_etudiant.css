@@ -1,0 +1,22 @@
+.sidebar-item {
+    -fx-cursor: hand;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #2a3547;
+}
+
+.sidebar-item-active {
+    -fx-cursor: hand;
+    -fx-background-color: #263347;
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 0 0 0 3px;
+}
+
+.sidebar-item-logout {
+    -fx-cursor: hand;
+}
+
+.sidebar-item-logout:hover {
+    -fx-background-color: #2d1f1f;
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="665.0" prefWidth="1080.0" stylesheets="@../css/main.css" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardEtudiantController">
+   <children>
+      <ScrollPane fitToWidth="true" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" style="-fx-background-color: transparent; -fx-background: #f8fafc;">
+         <content>
+            <VBox spacing="20.0">
+               <children>
+
+                  <!-- Titre -->
+                  <VBox spacing="4.0">
+                     <children>
+                        <Label text="Dashboard Étudiant" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                        <Label text="Vue d'ensemble du profil académique" style="-fx-font-size: 13px; -fx-text-fill: #64748b;" />
+                     </children>
+                  </VBox>
+
+                  <!-- Card infos étudiant -->
+                  <HBox styleClass="card" spacing="20.0" alignment="CENTER_LEFT">
+                     <children>
+
+                        <!-- Avatar -->
+                        <VBox alignment="CENTER" minWidth="50.0" maxWidth="50.0" minHeight="50.0" maxHeight="50.0" style="-fx-background-color: #3b82f6; -fx-background-radius: 25px;">
+                           <children>
+                              <Label fx:id="avatarLabel" text="MT" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" />
+                           </children>
+                        </VBox>
+
+                        <!-- Infos -->
+                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="nomEtudiant" text="Nom Prénom" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                              <Label fx:id="promoEtudiant" text="BUT1 - Informatique" style="-fx-font-size: 12px; -fx-text-fill: #3b82f6;" />
+                              <Label fx:id="numeroEtudiant" text="N° E001" style="-fx-font-size: 12px; -fx-text-fill: #64748b;" />
+                           </children>
+                        </VBox>
+
+                        <!-- Stats -->
+                        <HBox spacing="40.0" alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER" spacing="4.0">
+                                 <children>
+                                    <Label fx:id="moyenneLabel" text="13.8" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                                    <Label text="MOYENNE" style="-fx-font-size: 10px; -fx-text-fill: #64748b;" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" spacing="4.0">
+                                 <children>
+                                    <Label fx:id="nbModulesLabel" text="14" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                                    <Label text="RESSOURCES" style="-fx-font-size: 10px; -fx-text-fill: #64748b;" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" spacing="4.0">
+                                 <children>
+                                    <Label fx:id="assiduitéLabel" text="88%" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #22c55e;" />
+                                    <Label text="ASSIDUITÉ" style="-fx-font-size: 10px; -fx-text-fill: #64748b;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+
+                     </children>
+                     <padding>
+                        <Insets top="20.0" right="25.0" bottom="20.0" left="20.0" />
+                     </padding>
+                  </HBox>
+
+                  <!-- Notes + Assiduité -->
+                  <HBox spacing="20.0">
+                     <children>
+
+                        <!-- Card notes -->
+                        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="12.0">
+                           <children>
+                              <VBox spacing="2.0">
+                                 <children>
+                                    <Label text="Notes récentes" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                                    <Label text="Dernières évaluations" style="-fx-font-size: 11px; -fx-text-fill: #64748b;" />
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="tableNotes" prefHeight="200.0" maxWidth="1.7976931348623157E308">
+                                 <columns>
+                                    <TableColumn fx:id="colModule" text="Module" prefWidth="200.0" />
+                                    <TableColumn fx:id="colNote" text="Note" prefWidth="100.0" />
+                                    <TableColumn fx:id="colCoeff" text="Coeff" prefWidth="80.0" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                           </padding>
+                        </VBox>
+
+                        <!-- Card assiduité -->
+                        <VBox styleClass="card" prefWidth="380.0" spacing="12.0">
+                           <children>
+                              <VBox spacing="2.0">
+                                 <children>
+                                    <Label text="Assiduité" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                                    <Label text="Semestre en cours" style="-fx-font-size: 11px; -fx-text-fill: #64748b;" />
+                                 </children>
+                              </VBox>
+                              <HBox spacing="15.0">
+                                 <children>
+                                    <!-- Absences -->
+                                    <VBox alignment="CENTER" HBox.hgrow="ALWAYS" spacing="8.0" style="-fx-background-color: #fef2f2; -fx-background-radius: 8px;" prefHeight="100.0">
+                                       <children>
+                                          <Label text="✕" style="-fx-font-size: 18px; -fx-text-fill: #ef4444;" />
+                                          <Label fx:id="nbAbsences" text="4" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #ef4444;" />
+                                          <Label text="ABSENCES" style="-fx-font-size: 10px; -fx-text-fill: #64748b;" />
+                                       </children>
+                                       <padding>
+                                          <Insets top="15.0" bottom="15.0" />
+                                       </padding>
+                                    </VBox>
+                                    <!-- Retards -->
+                                    <VBox alignment="CENTER" HBox.hgrow="ALWAYS" spacing="8.0" style="-fx-background-color: #fffbeb; -fx-background-radius: 8px;" prefHeight="100.0">
+                                       <children>
+                                          <Label text="!" style="-fx-font-size: 18px; -fx-text-fill: #f59e0b;" />
+                                          <Label fx:id="nbRetards" text="3" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #f59e0b;" />
+                                          <Label text="RETARDS" style="-fx-font-size: 10px; -fx-text-fill: #64748b;" />
+                                       </children>
+                                       <padding>
+                                          <Insets top="15.0" bottom="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                           </padding>
+                        </VBox>
+
+                     </children>
+                  </HBox>
+
+                  <!-- Card modules suivis -->
+                  <VBox styleClass="card" spacing="12.0">
+                     <children>
+                        <VBox spacing="2.0">
+                           <children>
+                              <Label text="Modules suivis" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" />
+                              <Label fx:id="nbModulesTexte" text="14 modules - Semestre 2" style="-fx-font-size: 11px; -fx-text-fill: #64748b;" />
+                           </children>
+                        </VBox>
+                        <GridPane fx:id="gridModules" hgap="10.0" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="33.0" />
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="33.0" />
+                              <ColumnConstraints hgrow="ALWAYS" percentWidth="33.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                     </padding>
+                  </VBox>
+
+               </children>
+               <padding>
+                  <Insets top="25.0" right="25.0" bottom="25.0" left="25.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

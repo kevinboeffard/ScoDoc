@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="55.0" stylesheets="@../css/topbar.css" style="-fx-background-color: #ffffff; -fx-border-color: #e2e8f0; -fx-border-width: 0 0 1 0;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TopbarController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="55.0" spacing="10.0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+         <children>
+
+            <!-- Bouton retour -->
+            <VBox fx:id="btnRetour" alignment="CENTER" prefHeight="55.0" prefWidth="60.0" styleClass="sidebar-item" onMouseClicked="#handleRetour">
+               <children>
+                  <Label text="← Retour" style="-fx-font-size: 11px; -fx-text-fill: #64748b;" />
+               </children>
+            </VBox>
+
+            <!-- Spacer -->
+            <HBox HBox.hgrow="ALWAYS" />
+
+            <!-- Toggle Vue Prof / Vue DE (visible uniquement pour un Directeur des Études) -->
+            <HBox fx:id="toggleModeDE" alignment="CENTER" spacing="0" visible="false" managed="false"
+                  style="-fx-background-color: #f1f5f9; -fx-background-radius: 20px; -fx-padding: 3px;">
+               <children>
+                  <Label fx:id="lblModeProf" text="Prof" onMouseClicked="#handleModeProf"
+                        style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-padding: 6px 14px; -fx-background-radius: 17px; -fx-cursor: hand;" />
+                  <Label fx:id="lblModeDE" text="DE" onMouseClicked="#handleModeDE"
+                        style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-padding: 6px 14px; -fx-background-radius: 17px; -fx-cursor: hand;" />
+               </children>
+            </HBox>
+            <!-- Notifs -->
+            <VBox fx:id="btnNotifs" alignment="CENTER" prefHeight="55.0" prefWidth="40.0" styleClass="sidebar-item" onMouseClicked="#handleNotifs">
+               <children>
+                  <Label text="🔔" style="-fx-font-size: 18px;" />
+               </children>
+            </VBox>
+
+            <!-- Avatar -->
+            <VBox fx:id="avatarBox" alignment="CENTER" minWidth="35.0" maxWidth="35.0" minHeight="35.0" maxHeight="35.0" style="-fx-background-color: #3b82f6; -fx-background-radius: 17.5px;">
+               <children>
+                  <Label fx:id="avatarLabel" text="MT" style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold;" />
+               </children>
+            </VBox>
+
+            <!-- Nom utilisateur -->
+            <Label fx:id="nomUtilisateur" text="Utilisateur" style="-fx-font-size: 13px; -fx-text-fill: #1e293b;" />
+
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

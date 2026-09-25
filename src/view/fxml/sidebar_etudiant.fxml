@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="200.0" stylesheets="@../css/sidebar_etudiant.css" style="-fx-background-color: #1e2738;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SidebarController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="200.0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+         <children>
+
+            <!-- Logo -->
+            <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: #2d3a4f; -fx-border-width: 0 0 1 0;">
+               <children>
+                  <Label text="ScoDoc" style="-fx-text-fill: #3b82f6; -fx-font-weight: bold; -fx-font-size: 20px;" />
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+
+            <!-- Menu items -->
+            <VBox VBox.vgrow="ALWAYS" spacing="2.0">
+               <children>
+                  <HBox fx:id="btnDashboard" alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="200.0" styleClass="sidebar-item-active" onMouseClicked="#handleDashboard" spacing="14.0">
+                     <children>
+                        <Label text="■" style="-fx-font-size: 12px; -fx-text-fill: #3b82f6;" />
+                        <Label text="Dashboard" style="-fx-font-size: 13px; -fx-text-fill: #3b82f6; -fx-font-weight: bold;" />
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btnNotes" alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="200.0" styleClass="sidebar-item" onMouseClicked="#handleNotes" spacing="14.0">
+                     <children>
+                        <Label text="≡" style="-fx-font-size: 12px; -fx-text-fill: #8a9ab0;" />
+                        <Label text="Notes" style="-fx-font-size: 13px; -fx-text-fill: #8a9ab0;" />
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btnAbsences" alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="200.0" styleClass="sidebar-item" onMouseClicked="#handleAbsences" spacing="14.0">
+                     <children>
+                        <Label text="▦" style="-fx-font-size: 12px; -fx-text-fill: #8a9ab0;" />
+                        <Label text="Absences" style="-fx-font-size: 13px; -fx-text-fill: #8a9ab0;" />
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btnEmploi" alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="200.0" styleClass="sidebar-item" onMouseClicked="#handleEmploi" spacing="14.0">
+                     <children>
+                        <Label text="◷" style="-fx-font-size: 12px; -fx-text-fill: #8a9ab0;" />
+                        <Label text="Emploi du temps" style="-fx-font-size: 13px; -fx-text-fill: #8a9ab0;" />
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+
+            <!-- Déconnexion -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" styleClass="sidebar-item-logout" onMouseClicked="#handleDeconnexion" spacing="14.0" style="-fx-border-color: #2d3a4f; -fx-border-width: 1 0 0 0;">
+               <children>
+                  <Label text="←" style="-fx-font-size: 14px; -fx-text-fill: #ef4444;" />
+                  <Label text="Se déconnecter" style="-fx-font-size: 13px; -fx-text-fill: #ef4444;" />
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
